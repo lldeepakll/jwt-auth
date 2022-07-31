@@ -1,24 +1,25 @@
-# README
+### JWT authentication
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+For login 
 
-Things you may want to cover:
+***POST localhost:3000/auth/login***
 
-* Ruby version
+> Request :
 
-* System dependencies
+```
+{
+  "email":"deepak@gmail.com",
+  "password":"123456"
+}
+```
 
-* Configuration
+> Response : 
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+{
+    "token": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTk4ODIzMDB9.uqvehljBu8RUch6hwZXxR1SzpjqDgszk21jVdSydpvs",
+    "id": 1,
+    "name": "Deepak",
+    "email": "deepak@gmail.com"
+}
+```
