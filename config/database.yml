@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: jwt_auth
+  database: jwt_auth_development
   host: localhost
   port: 5432
   user: postgres
@@ -61,7 +61,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: jwt_auth
+  database: jwt_auth_test
   port: 5432
   user: postgres
   password: ******
@@ -88,6 +88,6 @@ test:
 production:
   <<: *default
   # url: <%= ENV['DATABASE_URL'] %>
-  database: jwt_auth
+  database: jwt_auth_production
   username: jwt_auth
   password: <%= ENV['JWT_AUTH_DATABASE_PASSWORD'] %>
