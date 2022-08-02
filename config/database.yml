@@ -87,4 +87,7 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  # url: <%= ENV['DATABASE_URL'] %>
+  database: jwt_auth_production
+  username: jwt_auth
+  password: <%= ENV['JWT_AUTH_DATABASE_PASSWORD'] %>
